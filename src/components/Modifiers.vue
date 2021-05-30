@@ -111,18 +111,24 @@
     <br />
     <div>
       <label for="age">Age</label>
-      <input type="number" name="" id="age" v-model.number="formValues.age" />
+      <input
+        @keyup.enter="submitForm"
+        type="number"
+        name=""
+        id="age"
+        v-model.number="formValues.age"
+      />
     </div>
     <br />
-    <div>
+    <!-- <div>
       <button type="submit">Submit</button>
-    </div>
+    </div> -->
   </form>
 </template>
 
 <script>
 export default {
-  name: "FormControls",
+  name: "Modifiers",
   data() {
     return {
       formValues: {
